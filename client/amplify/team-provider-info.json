@@ -1,0 +1,48 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-proyecto-dev-180343-authRole",
+      "UnauthRoleArn": "arn:aws:iam::514467654023:role/amplify-proyecto-dev-180343-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::514467654023:role/amplify-proyecto-dev-180343-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+      "UnauthRoleName": "amplify-proyecto-dev-180343-unauthRole",
+      "StackName": "amplify-proyecto-dev-180343",
+      "StackId": "arn:aws:cloudformation:eu-west-2:514467654023:stack/amplify-proyecto-dev-180343/28e0c8d0-9e04-11eb-a694-0242e9b025b6",
+      "AmplifyAppId": "dxcz8v779epll"
+    },
+    "categories": {
+      "auth": {
+        "proyecto0b4e297e": {
+          "facebookAppId": "888770938523420",
+          "googleClientId": "142149589076-gej1sikfctm1rte4k1cvgq08p126ls19.apps.googleusercontent.com"
+        }
+      },
+      "function": {
+        "AdminQueriesfd8ca2db": {
+          "deploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+          "s3Key": "amplify-builds/AdminQueriesfd8ca2db-5841536e74683038656d-build.zip"
+        },
+        "proyecto0b4e297eCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+          "s3Key": "amplify-builds/proyecto0b4e297eCreateAuthChallenge-46646465763956676643-build.zip"
+        },
+        "proyecto0b4e297eDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+          "s3Key": "amplify-builds/proyecto0b4e297eDefineAuthChallenge-73364a375957784a412f-build.zip"
+        },
+        "proyecto0b4e297eVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "",
+          "deploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+          "s3Key": "amplify-builds/proyecto0b4e297eVerifyAuthChallengeResponse-35573867446749437135-build.zip"
+        }
+      },
+      "interactions": {
+        "Sobway": {
+          "deploymentBucketName": "amplify-proyecto-dev-180343-deployment",
+          "s3Key": "amplify-builds/Sobway-6163636d63396e497542-build.zip"
+        }
+      }
+    }
+  }
+}

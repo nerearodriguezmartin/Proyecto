@@ -1,0 +1,38 @@
+
+
+<div  class="d-flex justify-content-center container">
+  <amplify-authenticator usernameAlias="email">
+    <amplify-sign-up
+    header-text="Registro de Sobway"
+    submitButtonText = "REGISTRO"
+    slot="sign-up"
+    usernameAlias="email"
+    [formFields]= "formFieldsSingUp"
+    haveAccountText= "¿Ya tienes una cuenta de Sobway?"
+    signInText= "¡Accede aquí!"
+    ></amplify-sign-up>
+    <amplify-sign-in slot="sign-in"
+    usernameAlias="email"
+    header-text="Accede a tu cuenta"
+    primary-footer-content= "¿Has olvidado tu contraseña?"
+    submitButtonText= "ACCEDER"
+    [formFields]="formFields"
+    signUpText= "¡Crea tu cuenta aquí!"
+    ></amplify-sign-in>
+  </amplify-authenticator>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

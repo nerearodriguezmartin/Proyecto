@@ -1,0 +1,190 @@
+<div class="container instalacion">
+  <br>
+  <h3 class="red-text instalacion-title title">{{instalacion.nombre}}</h3>
+  <i *ngIf="!guarda" class="far fa-heart fa-2x right pill red-text" (click)="guardaLike()"></i>
+  <i *ngIf="guarda" class="fas fa-heart fa-2x right pill red-text" (click)="borraLike()"></i>
+
+  <hr>
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12 col-lg-6">
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-container>
+          <ng-template carouselSlide id="1">
+            <img [src]="instalacion.img"  title="">
+          </ng-template>`
+
+          <ng-template carouselSlide id="2">
+           <img [src]="instalacion.img2"  title="">
+         </ng-template>
+
+         <ng-template carouselSlide id="3">
+           <img [src]="instalacion.img3"  title="">
+         </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+    </div>
+
+
+  </div>
+
+
+
+  <hr>
+
+
+  <div class="row">
+    <div class="col s8 offset-s1">
+      <br>
+      <p>{{instalacion.descripcion}}.</p>
+      <hr>
+      <i class="far fa-clock fa-2x icon red-text"></i>
+      <h4 class="title red-text">  HORARIO</h4>
+      <hr>
+      <i class="fas fa-door-open fa-2x"></i>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Hora de apertura</p>
+        </div>
+        <div class="col-sm-6">
+          <p>{{instalacion.hora_apertura}}</p>
+        </div>
+      </div>
+
+
+      <br><br>
+      <i class="fas fa-door-closed fa-2x"></i>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Hora de cierre</p>
+        </div>
+        <div class="col-sm-6">
+          <p>{{instalacion.hora_cierre}}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col s4">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title red-text">Añade la fecha y el turno</span>
+              <hr>
+
+              <input [(ngModel)]="fecha" type="date" [min]="hoy | date:'yyyy-MM-dd'">
+
+              <select class="form-control"
+              [(ngModel)]="selected">
+                <option selected >Selecciona el turno</option>
+                <option *ngFor= "let turno of horario" >{{turno.tramo_horario}}</option>
+
+              </select>
+
+
+              <select class="form-control" [(ngModel)]="pases">
+                <option>Número de pases</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+              </select>
+              <br>
+
+              <h3 class="center-align">{{instalacion.precio}} €<span class="pase">/pase</span></h3>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn red white-text card-btn" (click)="guardarReserva()">COMPROBAR DISPONIBILIDAD</a>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col s6">
+      <div class="row">
+        <div class="col-sm-4">
+          <label class="black-text">Limpieza</label>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" [style.width]="(instalacion.limpieza)+'0%'" [attr.aria-valuenow]="instalacion.limpieza" aria-valuemin="0" aria-valuemax="10">{{instalacion.limpieza}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s6">
+      <div class="row">
+        <div class="col-sm-4">
+          <label class="black-text">Ubicación</label>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" [style.width]="(instalacion.ubicacion)+'0%'" [attr.aria-valuenow]="instalacion.ubicacion" aria-valuemin="0" aria-valuemax="10">{{instalacion.ubicacion}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <div class="row">
+        <div class="col-sm-4">
+          <label class="black-text">Comunicación</label>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar"  [style.width]="(instalacion.comunicacion)+'0%'" [attr.aria-valuenow]="instalacion.comunicacion" aria-valuemin="0" aria-valuemax="10">{{instalacion.comunicacion}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s6">
+      <div class="row">
+        <div class="col-sm-4">
+          <label class="black-text bold">Calidad</label>
+        </div>
+        <div class="col-sm-8">
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" [style.width]="(instalacion.calidad)+'0%'" [attr.aria-valuenow]="instalacion.calidad" aria-valuemin="0" aria-valuemax="10">{{instalacion.calidad}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <hr>
+
+  <h3 class="instalacion-title">Ubicación</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1">
+      <iframe [attr.src]="comunidad.mapa | safe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+  </div>
+
+
+  <notifier-container></notifier-container>
+
+</div>
+
+

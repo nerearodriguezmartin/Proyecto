@@ -1,0 +1,20 @@
+export interface Instalacion {
+  cod_instalacion?: number,
+  cod_comunidad?: number,
+  hora_apertura?: string,
+  hora_cierre?: string,
+  aforo?: number,
+  tipo_instalacion?: string,
+  nombre?: string,
+  precio?: number,
+  limpieza?: number,
+  comunicacion?: number,
+  ubicacion?: number,
+  calidad?: number,
+  persona_ajeno?: boolean,
+  img?: string,
+  img2?: string,
+  img3?: string,
+  descripcion?: string,
+  reserva_maxima?: number
+}

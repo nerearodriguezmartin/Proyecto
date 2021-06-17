@@ -1,0 +1,53 @@
+<div class="col-md-4 offset-md-2">
+  <div class="card d-flex center-align">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label>Nombre:</label><input type="text" [(ngModel)]="instalacion.nombre" name="title" placeholder="Nombre" class="form-control" autofocus>
+          <label>Precio:</label><input type="text" [(ngModel)]="instalacion.precio" name="comunidad" placeholder="Precio" class="form-control" autofocus>
+          <label>Valoración de la limpieza:</label><input type="number" name="limpieza" [(ngModel)]="instalacion.limpieza" placeholder="Valor de la limpieza" class="form-control">
+          <label>Valoración de la comunicación:</label><input type="number" name="image" [(ngModel)]="instalacion.comunicacion" placeholder="Valor de la comunicacion" class="form-control">
+          <label>Valoración de la ubicación:</label><input type="number" name="image" [(ngModel)]="instalacion.ubicacion" placeholder="Valoración de la ubicación" class="form-control">
+          <label>Valoración de la calidad de la instalación:</label><input type="number" name="valoracion" [(ngModel)]="instalacion.calidad" placeholder="Valoración de la calidad" class="form-control">
+
+
+          <label>Imagen 1:</label><input type="url" name="image" [(ngModel)]="instalacion.img"   placeholder="Imagen 1" class="form-control">
+
+          <label>Imagen 2:</label><input type="url" name="image2" [(ngModel)]="instalacion.img2" placeholder="Imagen 2" class="form-control">
+
+          <label>Imagen 3:</label><input type="url" name="image3" [(ngModel)]="instalacion.img3"  placeholder="Imagen 3" class="form-control">
+
+          <label>Descripción:</label><textarea type="url" name="descripcion" [(ngModel)]="instalacion.descripcion" placeholder="Descripción" class="form-control"></textarea>
+          <label>Codigo de la comunidad:</label><input type="number" name="cc" [(ngModel)]="instalacion.cod_comunidad" placeholder="Comunidad" class="form-control">
+          <label>Hora de apertura:</label><input type="text" name="ha" [(ngModel)]="instalacion.hora_apertura" placeholder="Hora de apertura" class="form-control">
+          <label>Hora de cierre:</label><input type="text" name="hc" [(ngModel)]="instalacion.hora_cierre" placeholder="Hora de Cierre" class="form-control">
+
+        </div>
+        <button class="btn btn-block orange" (click)= "saveNewInstalacion()">
+          SAVE
+        </button>
+      </form>
+    </div>
+
+    <div class="row">
+      <h3>PREVISUALIZACIÓN</h3>
+      <hr>
+      <div class="col-sm-4">
+        <img class="reserva-img" [src]="instalacion.img">
+      </div>
+      <div class="col-sm-8">
+        <h3>{{instalacion.nombre}}</h3>
+        <h6>Precio:   {{instalacion.precio}}€</h6>
+        <p>Descripcion:   {{instalacion.descripcion}}</p>
+        <p>Hora Apertura: {{instalacion.hora_apertura}}</p>
+        <p>Hora Cierre: {{instalacion.hora_cierre}}</p>
+
+      </div>
+
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+

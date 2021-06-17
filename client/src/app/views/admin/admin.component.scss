@@ -1,0 +1,33 @@
+.admin{
+  background-color: rgb(255, 249, 244);
+  margin-top: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.reserva {
+  &-img{
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+.card{
+  &-content{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 13vh;
+    width: 40vw;
+    white-space:nowrap;
+  }
+  &-content:hover{
+    width: auto;
+  white-space: initial;
+  overflow:visible;
+  cursor: pointer;
+  }
+
+  &-img-top{
+    height: 25vh;
+  }
+}

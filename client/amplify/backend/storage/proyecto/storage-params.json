@@ -1,0 +1,16 @@
+{
+    "groupPermissionMap": {
+        "superadmin": [
+            "create/update",
+            "read"
+        ],
+        "admin": [
+            "create/update",
+            "read"
+        ],
+        "user": [
+            "create/update",
+            "read"
+        ]
+    }
+}

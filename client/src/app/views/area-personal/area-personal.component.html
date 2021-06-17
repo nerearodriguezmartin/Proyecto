@@ -1,0 +1,51 @@
+<div class="container personal">
+  <h2 class="red-text">ÁREA PERSONAL</h2>
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button class="btn btn-outline-secondary" type="button" (click)="reserva = false">Tus favoritos</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="reserva = true">Reservas</button>
+    </form>
+  </nav>
+  <div class="text-center instalacion row" *ngIf="!reserva">
+    <h4>Instalaciones</h4>
+    <div class="col-6 col-xs-12  col-xl-4" *ngFor= "let instalacion of userInstalaciones">
+      <div class="card">
+        <div class="card-image">
+          <img [src]="instalacion.img" class="card-img-top">
+          <span class="card-title">{{instalacion.nombre}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{instalacion.descripcion}}</p>
+        </div>
+        <button class="btn btn-danger" (click)="deleteLike(instalacion.cod_instalacion)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+
+
+      </div>
+
+  </div>
+  </div>
+
+  <div *ngIf="reserva">
+    <h4>Reservas</h4>
+    <div class="row" *ngFor="let reserva of userReserva">
+      <hr>
+      <div class="col-sm-4">
+        <img class="reserva-img" [src]="reserva.img">
+      </div>
+      <div class="col-sm-8">
+        <h3>{{reserva.nombre}}</h3>
+        <h6>FECHA:   {{reserva.fecha | date:'dd/MM/yyyy'}}</h6>
+        <p>TURNO:   {{reserva.turno}}</p>
+        <p>PASES: {{reserva.num_pases}}</p>
+        <p>TOTAL: {{reserva.total}} €</p>
+        <p>PAGADO: <i *ngIf="reserva.pagado" class="far fa-check-circle green-text"></i><i class="far fa-times-circle red-text" *ngIf="!reserva.pagado"></i></p>
+        <i class="fas fa-user"></i>{{reserva.usuario}}
+      </div>
+
+      <hr>
+    </div>
+
+
+</div>

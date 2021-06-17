@@ -1,0 +1,53 @@
+<div class="navbar-fixed">
+    <nav class="header  transparent z-depth-0">
+        <div class="header nav-wrapper valign-wrapper">
+
+            <ul class="section table-of-contents tabs menu row">
+
+                <div class="col-sm-7  hide-on-small-only">
+                  <li class="tab"><a href="#introduction"  class="white-text"><img src="../../../assets/img/icon blanco.png"></a></li>
+                  <li class="tab"><a href="#introduction" class="white-text">INICIO</a></li>
+                  <li class="tab"><a href="#servicios" class="white-text">SERVICIOS</a></li>
+                  <li class="tab"><a href="#nosotros" class="white-text">NOSOTROS</a></li>
+                  <li class="tab"><a href="#clientes" class="white-text">CLIENTES</a></li>
+                  <li class="tab"><a href="#contacta" class="white-text">CONTACTA</a></li>
+                  <li class="tab" *ngIf="login" (click)="notificacion()"><a routerLink="instalaciones" class="white-text">INSTALACIONES</a></li>
+
+
+
+
+                </div>
+
+                <div *ngIf="!login" class="col-sm-4">
+                  <a routerLink="/login" class="login right pill red-text" >REGISTRO</a>
+                  <a routerLink="/login" class="login right pill">LOGIN</a>
+              </div>
+
+
+
+
+            </ul>
+            <div class="dropdown user col-sm-4" *ngIf="login">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>{{user}}</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" routerLink="/personal"><i class="large material-icons icon">home</i>ÁREA PERSONAL</a>
+                <a class="dropdown-item" routerLink="/instalaciones"><i class="fas fa-building icon"></i>INSTALACIONES</a>
+                <a routerLink="/admin" class="dropdown-item" *ngIf="username == 'nerearodrimar2001@gmail.com'"><i class="icon large material-icons">location_city</i>ADMINISTRACIÓN</a>
+                <a (click)="logout()"  class="dropdown-item"><i class="large material-icons icon">settings</i>CERRAR SESIÓN</a>
+
+
+
+
+              </div>
+            </div>
+        </div>
+    </nav>
+    <notifier-container></notifier-container>
+</div>
+
+
+
+
+

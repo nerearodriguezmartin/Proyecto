@@ -1,0 +1,43 @@
+
+<div class="container d-flex justify-content-center container">
+
+    <!--<form [formGroup]="signupForm" >
+      <p>
+        <label>Email: </label>
+        <input type="email" formControlName="email" [(ngModel)]= "email">
+      </p>
+      <p>
+        <label>Password: </label>
+        <input type="password" formControlName="password" [(ngModel)]= "password">
+      </p>
+      <button type="submit" (click)="signUp()">Submit</button>
+    </form>
+
+  -->
+ <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"> <div class="confirmation" *ngIf="successfullySignup">
+    <form [formGroup]="confirmationForm" (ngSubmit)="onSubmitConfirmation(confirmationForm.value)">
+      <p>
+        <label>Email: </label>
+        <input type="email" formControlName="email">
+      </p>
+      <p>
+        <label>Confirmation Code: </label>
+        <input type="text" formControlName="confirmationCode">
+      </p>
+      <button type="submit">Confirm</button>
+    </form>
+  </div>-->
+
+<amplify-sign-up
+      header-text="Registro de Sobway"
+      submitButtonText = "REGISTRO"
+      slot="sign-up"
+      usernameAlias="email"
+      [formFields]= "formFieldsSingUp"
+      haveAccountText= "¿Ya tienes una cuenta de Sobway?"
+      signInText= "¡Accede aquí!"
+    >
+
+  </amplify-sign-up>-->
+
+  </div>

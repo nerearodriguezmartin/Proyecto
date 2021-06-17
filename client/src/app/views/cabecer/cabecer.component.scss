@@ -1,0 +1,44 @@
+.login{
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+.icon {
+  display: inline;
+}
+
+.header, .navbar{
+    height: 14vh;
+    z-index: 9999;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.menu{
+    background-color: black;
+    opacity: 0.7;
+}
+.pill{
+    width: 80px;
+    margin-right: 10px;
+    z-index: 999999;
+}
+
+img {
+  width: 50px;
+}
+
+i{
+  width: 5px;
+}
+
+.user{
+  background-color: transparent;
+}
+
+.btn {
+  background-color: transparent;
+  height: 3rem;
+}

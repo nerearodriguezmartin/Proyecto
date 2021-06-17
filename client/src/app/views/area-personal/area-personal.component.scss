@@ -1,0 +1,13 @@
+.personal{
+  width: 100vw;
+  background-color: rgb(255, 249, 244);
+  margin-top: 5rem;
+}
+
+.reserva {
+  &-img{
+    height: 15rem;
+    width: 15rem;
+  }
+}
+

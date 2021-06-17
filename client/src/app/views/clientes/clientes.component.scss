@@ -1,0 +1,83 @@
+.clientes{
+    height: 100vh;
+    background-color: rgb(48, 45, 45);
+}
+
+
+
+.empresa{
+  background: url(../../../assets/img/empresas.jpg);
+  background-size: cover;
+  opacity: 0.6;
+}
+
+
+.propietario{
+  background: url(../../../assets/img/inquilino.jpg);
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.property{
+  background: url(../../../assets/img/property-management.jpg);
+  background-size: cover;
+  opacity:.6;
+}
+
+.promotores{
+  background: url(../../../assets/img/promotores.jpg);
+  background-size: cover;
+  z-index: 1;
+  opacity: .6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.col{
+  height: 18rem;
+  width: 18rem;
+  padding: 2rem;
+}
+
+.row{
+  height: 20rem;
+}
+
+h4, p{
+  position: relative;
+  z-index: 2;
+}

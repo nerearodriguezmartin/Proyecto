@@ -1,0 +1,40 @@
+.instalaciones{
+  width: 100vw;
+  background-color: rgb(255, 249, 244);
+  margin-top: 3rem;
+
+}
+
+.carousel {
+  height: 25vh;
+}
+
+.instalacion {
+  margin-bottom: 2rem;
+}
+
+.card{
+  border-radius: 30px;
+  &-title {
+    font-weight: bold;
+  }
+}
+
+.card{
+  &-content{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 15vh;
+  }
+  &-content:hover{
+    width: auto;
+  white-space: initial;
+  overflow:visible;
+  cursor: pointer;
+  }
+
+  &-img-top{
+    height: 25vh;
+  }
+}
+

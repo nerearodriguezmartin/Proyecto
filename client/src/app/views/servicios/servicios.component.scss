@@ -1,0 +1,32 @@
+.servicios{
+    height: 100vh;
+    background-color: rgb(48, 45, 45);
+
+    a{
+        margin: 2rem;
+        z-index: 2 !important;
+        height: 18vh;
+        background-color: rgb(48, 45, 45);;
+    }
+
+    .fondo{
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        z-index: 1 !important;
+    }
+
+    i, .fas, .far {
+      margin-top: 1rem;
+      font-size: 4rem;
+      color: #9c47fc;
+      display: block;
+      background: -webkit-linear-gradient(#9c47fc, #356ad2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
+}
+
+

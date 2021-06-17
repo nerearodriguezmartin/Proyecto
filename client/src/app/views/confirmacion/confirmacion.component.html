@@ -1,0 +1,61 @@
+<div class="container confirmacion">
+  <h2 class="red-text">Confirmar y pagar</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>Tu reserva</h4>
+      <br><hr><br>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5><i class="fas fa-calendar-day"></i> Fecha</h5>
+        </div>
+
+        <div class="col-sm-6">
+          <h5>   {{reserva.fecha | date:"dd/MM/yyyy"}} </h5>
+        </div>
+      </div>
+
+
+      <br><hr><br>
+      <div class="row">
+        <div class="col-sm-6">
+          <h5><i class="fas fa-clock"></i> Turno</h5>
+        </div>
+
+        <div class="col-sm-6">
+          <h5> {{reserva.turno}} </h5>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-image">
+          <img [src]="instalacion.img">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3>{{instalacion.nombre}}</h3>
+          </div>
+          <hr>
+          <div class="card-action">
+            <h3>Detalles de la reserva</h3>
+            <p><span class="h">{{instalacion.precio}}</span>€/pase  * <span class="h">{{reserva.num_pases}}</span> {{pase()}}</p>
+            <p>Total: </p><span class="inline pill rigth h">{{instalacion.precio*reserva.num_pases}} €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <h3>Elige cómo pagar</h3>
+  <label><input type="checkbox" id="cbox1" value="first_checkbox">Puede pagar con PayPal, o en el establecimiento</label><br>
+  <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+
+  <button class="col s12 waves-effect waves-light btn red" (click)="guardarReserva()">CONFIRMAR LA RESERVA</button>
+
+</div>
+
+
+
+
